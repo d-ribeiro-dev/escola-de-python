@@ -1,0 +1,1123 @@
+:root {
+    --ink: #202638;
+    --muted: #697386;
+    --line: #e5e8ef;
+    --paper: #fff;
+    --bg: #f7f8fc;
+    --blue: #315fce;
+    --blue-dark: #244aa7;
+    --blue-soft: #eef3ff;
+    --green: #18794e;
+    --red: #b42318;
+    --amber: #946200;
+    --radius: 16px;
+    --shadow: 0 8px 28px rgba(25, 38, 72, .06)
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 15px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif
+}
+
+button,
+input,
+textarea {
+    font: inherit
+}
+
+button {
+    cursor: pointer
+}
+
+.shell {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 28px 22px 60px
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 22px
+}
+
+.mascot {
+    width: 88px;
+    height: 88px;
+    flex: 0 0 88px;
+    object-fit: cover;
+    object-position: 50% 18%;
+    border-radius: 18px;
+    background: #f0eaff;
+    border: 1px solid #e8e3f5
+}
+
+.brand h1 {
+    font-size: clamp(1.55rem, 3vw, 2rem);
+    line-height: 1.15;
+    margin: 0 0 4px;
+    letter-spacing: -.04em
+}
+
+.brand p {
+    margin: 0;
+    color: var(--muted)
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--blue-dark);
+    background: var(--blue-soft);
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: .78rem;
+    font-weight: 700;
+    margin-bottom: 7px
+}
+
+.panel {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px;
+    margin: 16px 0
+}
+
+.rules {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 14px
+}
+
+.rule {
+    background: #fafbfe;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 12px
+}
+
+.rule b {
+    display: block;
+    font-size: 1.05rem
+}
+
+.rule span {
+    font-size: .8rem;
+    color: var(--muted)
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin: 0 0 6px;
+    letter-spacing: -.02em
+}
+
+h3 {
+    font-size: 1rem;
+    margin: 0 0 10px
+}
+
+.muted {
+    color: var(--muted)
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start
+}
+
+.progress {
+    height: 7px;
+    background: #edf0f6;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 14px 0 4px
+}
+
+.progress>span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: var(--blue);
+    transition: width .2s
+}
+
+.question {
+    padding: 19px 0;
+    border-top: 1px solid var(--line)
+}
+
+.question:first-of-type {
+    border-top: 0
+}
+
+.qhead {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 10px
+}
+
+.qnum {
+    font-size: .8rem;
+    font-weight: 750;
+    color: var(--blue);
+    letter-spacing: .04em
+}
+
+.topic {
+    font-size: .75rem;
+    color: var(--muted);
+    background: #f3f5f9;
+    padding: 4px 9px;
+    border-radius: 999px
+}
+
+.prompt {
+    font-weight: 650;
+    margin: 0 0 12px
+}
+
+.code {
+    font: .93rem/1.65 ui-monospace, SFMono-Regular, Consolas, monospace;
+    background: #f5f7fb;
+    border: 1px solid #e7eaf1;
+    border-radius: 10px;
+    padding: 12px 14px;
+    white-space: pre-wrap;
+    margin: 10px 0 13px;
+    color: #25314a
+}
+
+.options {
+    display: grid;
+    gap: 8px
+}
+
+.option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .15s
+}
+
+.option:hover {
+    border-color: #b7c7f2;
+    background: #fbfcff
+}
+
+.option:has(input:checked) {
+    border-color: var(--blue);
+    background: var(--blue-soft)
+}
+
+.option input {
+    margin-top: 4px;
+    accent-color: var(--blue)
+}
+
+.why {
+    display: block;
+    margin-top: 14px;
+    font-weight: 650;
+    font-size: .9rem
+}
+
+.why small {
+    display: block;
+    font-weight: 400;
+    color: var(--muted);
+    margin: 2px 0 7px
+}
+
+.why textarea {
+    display: block;
+    width: 100%;
+    min-height: 76px;
+    resize: vertical;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 10px 12px;
+    color: var(--ink);
+    background: #fff;
+    outline: none
+}
+
+.why textarea:focus {
+    border-color: #8aa7f1;
+    box-shadow: 0 0 0 3px #315fce18
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 18px
+}
+
+.btn {
+    border: 0;
+    border-radius: 10px;
+    padding: 11px 17px;
+    font-weight: 700
+}
+
+.primary {
+    background: var(--blue);
+    color: white
+}
+
+.primary:hover {
+    background: var(--blue-dark)
+}
+
+.secondary {
+    background: #f0f2f7;
+    color: #30394d
+}
+
+.danger {
+    background: #fff0ef;
+    color: var(--red)
+}
+
+button:disabled {
+    opacity: .5;
+    cursor: not-allowed
+}
+
+.notice {
+    font-size: .88rem;
+    color: var(--muted)
+}
+
+.hidden {
+    display: none !important
+}
+
+.score {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -.06em
+}
+
+.scoreline {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap
+}
+
+.result-item {
+    border-top: 1px solid var(--line);
+    padding: 14px 0
+}
+
+.status {
+    font-size: .77rem;
+    font-weight: 750;
+    padding: 4px 8px;
+    border-radius: 999px
+}
+
+.ok {
+    background: #eaf7f0;
+    color: var(--green)
+}
+
+.no {
+    background: #fff0ef;
+    color: var(--red)
+}
+
+.feedback {
+    margin: 8px 0 0;
+    color: #4e586b;
+    font-size: .9rem
+}
+
+.history-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 14px;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid var(--line)
+}
+
+.history-row:first-child {
+    border-top: 0
+}
+
+.small {
+    font-size: .82rem
+}
+
+.empty {
+    padding: 16px;
+    border: 1px dashed #d8deea;
+    border-radius: 12px;
+    color: var(--muted);
+    text-align: center
+}
+
+.footer {
+    text-align: center;
+    color: #8992a3;
+    font-size: .78rem;
+    margin-top: 28px
+}
+
+@media(max-width:700px) {
+    .shell {
+        padding: 18px 14px 42px
+    }
+
+    .top {
+        gap: 12px
+    }
+
+    .mascot {
+        width: 68px;
+        height: 68px;
+        flex-basis: 68px
+    }
+
+    .panel {
+        padding: 17px
+    }
+
+    .rules {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .intro {
+        display: block
+    }
+
+    .history-row {
+        grid-template-columns: 1fr auto
+    }
+
+    .history-row .when {
+        grid-column: 1/-1
+    }
+}
+
+@media print {
+    body {
+        background: #fff
+    }
+
+    .shell {
+        max-width: none;
+        padding: 0
+    }
+
+    .panel {
+        box-shadow: none;
+        break-inside: avoid
+    }
+
+    .actions,
+    .footer {
+        display: none !important
+    }
+}
+
+.home-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.home-card {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px;
+    background: #fafbfe;
+}
+
+.home-card p {
+    color: var(--muted);
+    min-height: 72px;
+}
+
+@media (max-width: 700px) {
+    .home-options {
+        grid-template-columns: 1fr;
+    }
+
+    .home-card p {
+        min-height: 0;
+    }
+}
+
+.home-card .tag {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+}
+
+.home-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+/* Níveis de avaliação */
+
+.levels-grid {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.level-card {
+    display: grid;
+    grid-template-columns: 48px 1fr auto;
+    align-items: center;
+    gap: 4px 16px;
+    width: 100%;
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #fafbfe;
+    color: var(--ink);
+    text-align: left;
+    transition: background .2s, border-color .2s;
+}
+
+.level-card:not(:disabled):hover {
+    border-color: var(--blue);
+    background: var(--blue-soft);
+}
+
+.level-card:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 3px;
+}
+
+.level-icon {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.level-card strong {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 1.1rem;
+}
+
+.level-card > span:not(.level-icon) {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: .88rem;
+    color: var(--muted);
+}
+
+.level-card small {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    color: var(--muted);
+}
+
+.level-card:disabled {
+    opacity: .65;
+    cursor: not-allowed;
+}
+
+@media (max-width: 700px) {
+    .level-card {
+        grid-template-columns: 38px 1fr;
+        padding: 14px;
+    }
+
+    .level-card small {
+        grid-column: 2;
+        grid-row: 3;
+    }
+}
+
+/* ========================================
+   PAITECH — IDENTIDADE VISUAL
+======================================== */
+
+.paitech-panel {
+    padding: 0;
+    overflow: hidden;
+}
+
+.paitech-header {
+    background: #14243c;
+    color: #ffffff;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.paitech-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.paitech-symbol {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: #315fce;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.paitech-brand h2 {
+    margin: 0;
+    font-size: 26px;
+    letter-spacing: 3px;
+}
+
+.paitech-brand p {
+    margin: 4px 0 0;
+    color: #b5c5da;
+    font-size: 12px;
+}
+
+.paitech-tag {
+    background: #253b58;
+    color: #dbeafe;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.paitech-content {
+    padding: 30px;
+}
+
+.paitech-location {
+    color: #697386;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.paitech-welcome h2 {
+    margin: 12px 0 6px;
+    color: #14243c;
+    font-size: 28px;
+}
+
+.paitech-welcome p {
+    color: #697386;
+    margin: 0;
+}
+
+.paitech-dialogue {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: #f0f4fa;
+    border: 1px solid #dce5f2;
+    border-radius: 14px;
+    padding: 22px;
+    margin: 28px 0;
+}
+
+.paitech-avatar {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #ffffff;
+    font-size: 32px;
+}
+
+.paitech-dialogue h3 {
+    margin: 0 0 8px;
+    color: #14243c;
+}
+
+.paitech-dialogue p {
+    margin: 8px 0;
+    line-height: 1.7;
+}
+
+.paitech-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.paitech-actions .primary {
+    background: #14243c;
+}
+
+.paitech-actions .primary:hover:not(:disabled) {
+    background: #253b58;
+}
+
+.paitech-actions button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* PAITECH — RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+    .paitech-header {
+        padding: 20px;
+    }
+
+    .paitech-content {
+        padding: 20px;
+    }
+
+    .paitech-dialogue {
+        flex-direction: column;
+        padding: 18px;
+    }
+
+    .paitech-welcome h2 {
+        font-size: 24px;
+    }
+
+    .paitech-actions {
+        flex-direction: column;
+    }
+
+    .paitech-actions .btn {
+        width: 100%;
+    }
+}
+
+/* PAITECH — ADMISSÃO E CARREIRA */
+
+.paitech-admission {
+    background: #ffffff;
+    border: 1px solid #dce5f2;
+    border-radius: 14px;
+    padding: 24px;
+    margin: 24px 0;
+}
+
+.paitech-admission h3 {
+    color: #14243c;
+    margin: 0 0 20px;
+}
+
+.paitech-admission label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.paitech-admission input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+    margin-bottom: 16px;
+}
+
+.paitech-admission input:focus {
+    outline: 2px solid #315fce;
+    outline-offset: 2px;
+}
+
+.paitech-admission p {
+    padding: 10px 0;
+    margin: 0;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.paitech-admission .paitech-actions {
+    margin-top: 24px;
+}
+
+@media (max-width: 700px) {
+    .paitech-admission {
+        padding: 18px;
+    }
+}
+
+
+/* ========================================
+   PAITECH — CENTRAL DE TRABALHO
+======================================== */
+
+.paitech-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.paitech-stat {
+    background: #f0f4fa;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.paitech-stat small {
+    display: block;
+    color: #697386;
+    margin-bottom: 6px;
+}
+
+.paitech-stat strong {
+    display: block;
+    color: #14243c;
+    font-size: 20px;
+}
+
+.paitech-progress {
+    margin-top: 24px;
+}
+
+.paitech-progress small {
+    color: #697386;
+}
+
+.paitech-progress-track {
+    background: #e5e8ef;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.paitech-progress-track > div {
+    background: #18794e;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.paitech-demand-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin: 24px 0;
+}
+
+.paitech-demand-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #dce5f2;
+    border-radius: 12px;
+    text-align: left;
+    font: inherit;
+    color: #14243c;
+    cursor: pointer;
+}
+
+.paitech-demand-card small {
+    color: #697386;
+    font-size: 12px;
+}
+
+.paitech-demand-card:not(:disabled):hover {
+    border-color: #315fce;
+    background: #eef3ff;
+}
+
+.paitech-demand-card:focus-visible {
+    outline: 2px solid #315fce;
+    outline-offset: 2px;
+}
+
+.paitech-demand-card:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.paitech-demand-card.demand-completed {
+    background: #eef8f2;
+    border-color: #9acdb0;
+    opacity: 1;
+}
+
+.demand-completed small {
+    color: #18794e;
+}
+
+#demandAnswers {
+    margin: 20px 0;
+}
+
+.paitech-admission .paitech-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid #dce5f2;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.paitech-option:hover {
+    background: #eef3ff;
+}
+
+.paitech-admission .paitech-option input {
+    width: auto;
+    margin: 0;
+    accent-color: #315fce;
+}
+
+.paitech-option span {
+    overflow-wrap: anywhere;
+}
+
+.paitech-dialogue.feedback-success {
+    background: #eef8f2;
+    border-color: #9acdb0;
+}
+
+.paitech-dialogue.feedback-retry {
+    background: #fff8e8;
+    border-color: #e6c778;
+}
+
+@media (max-width: 700px) {
+    .paitech-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .paitech-demand-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PAITECH — PERFIL DO COLABORADOR */
+
+.paitech-avatar-field {
+    border: 0;
+    padding: 0;
+    margin: 16px 0;
+}
+
+.paitech-avatar-field legend {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.paitech-avatar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.paitech-admission .paitech-avatar-choice {
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+}
+
+.paitech-avatar-choice input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.paitech-avatar-choice span {
+    display: grid;
+    place-items: center;
+    min-height: 64px;
+    font-size: 32px;
+    border: 2px solid #dce5f2;
+    border-radius: 10px;
+    background: #f0f4fa;
+}
+
+.paitech-avatar-choice input:checked + span {
+    border-color: #315fce;
+    background: #eef3ff;
+}
+
+.paitech-avatar-choice input:focus-visible + span {
+    outline: 2px solid #315fce;
+    outline-offset: 3px;
+}
+
+.paitech-admission .paitech-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px;
+    background: #f0f4fa;
+    border-radius: 10px;
+    margin: 20px 0 8px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.paitech-admission .paitech-consent input {
+    width: auto;
+    margin: 5px 0 0;
+    accent-color: #315fce;
+}
+
+/* PAITECH — CABEÇALHO PROFISSIONAL */
+
+.paitech-profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: #14243c;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.paitech-profile-info {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.paitech-profile-header .paitech-profile-info h3 {
+    color: #ffffff;
+    margin: 0 0 6px;
+    font-size: 20px;
+}
+
+.paitech-profile-info strong {
+    display: block;
+    color: #dbeafe;
+    font-size: 16px;
+}
+
+.paitech-profile-info small {
+    display: block;
+    color: #b5c5da;
+    margin-top: 4px;
+}
+
+.paitech-profile-avatar {
+    display: grid;
+    place-items: center;
+    width: 68px;
+    height: 68px;
+    flex-shrink: 0;
+    background: #253b58;
+    border: 2px solid #41536d;
+    border-radius: 50%;
+    font-size: 36px;
+}
+
+/* ========================================
+   MURAL DE COLABORADORES
+======================================== */
+
+.collaborators-mural {
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid #e5e8ef;
+}
+
+.mural-heading h2 {
+    color: #14243c;
+    margin: 0 0 12px;
+    font-size: 24px;
+}
+
+.mural-heading p {
+    color: #697386;
+    margin: 8px 0;
+}
+
+#joinMuralBtn {
+    margin-top: 12px;
+}
+
+.mural-gallery {
+    margin-top: 28px;
+}
+
+.mural-gallery h3 {
+    color: #14243c;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.mural-list {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fill, minmax(100px, 1fr));
+    gap: 18px;
+}
+
+.mural-person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+.mural-person-avatar {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #eef3ff;
+    border: 1px solid #dce5f2;
+    font-size: 34px;
+}
+
+.mural-person-name {
+    font-size: 13px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    max-width: 100%;
+}
+
+.mural-empty {
+    grid-column: 1 / -1;
+    color: #697386;
+    text-align: center;
+    padding: 24px;
+    background: #f7f8fc;
+    border-radius: 12px;
+}
