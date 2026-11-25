@@ -907,4 +907,8 @@ function showEditProfile() {
 
     showReception();
 
+    if (new URLSearchParams(window.location.search).get("paitech") === "1") {
+        mostrarArea("paitechPanel");
+    }
+
 })();
